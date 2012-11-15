@@ -14,7 +14,7 @@
 @interface BLYClient : NSObject
 
 @property (nonatomic, strong, readonly) NSString *socketID;
-@property (nonatomic, weak, readonly) id<BLYClientDelegate> delegate;
+@property (nonatomic, unsafe_unretained, readonly) id<BLYClientDelegate> delegate;
 @property (nonatomic, assign) BOOL automaticallyReconnect; // Default is YES
 
 #if TARGET_OS_IPHONE
